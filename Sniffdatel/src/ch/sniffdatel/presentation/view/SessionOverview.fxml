@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" stylesheets="@StandardTheme.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.sniffdatel.presentation.controller.SessionOverviewController">
+   <children>
+      <SplitPane dividerPositions="0.5" layoutY="36.0" orientation="VERTICAL" prefHeight="444.0" prefWidth="640.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="36.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="223.0" prefWidth="638.0">
+               <children>
+                  <TableView fx:id="sessionTable" layoutY="2.0" prefHeight="203.0" prefWidth="638.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="sessionNameColumn" prefWidth="261.0" text="Session Name" />
+                      <TableColumn fx:id="callerLeftColumn" minWidth="0.0" prefWidth="205.0" text="Caller Left" />
+                        <TableColumn fx:id="callerRightColumn" minWidth="0.0" prefWidth="229.0" text="Caller Right" />
+                        <TableColumn fx:id="stateColumn" minWidth="0.0" prefWidth="181.0" text="State" />
+                        <TableColumn fx:id="codecColumn" prefWidth="145.0" text="Codec" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TreeView fx:id="tree" prefHeight="361.0" prefWidth="1022.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <ButtonBar buttonMinWidth="28.0" prefHeight="34.0" prefWidth="640.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+        <buttons>
+          <Button fx:id="selectInterfaceButton" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#handleInterfaceSelection" prefHeight="30.0" prefWidth="30.0" ButtonBar.buttonData="LEFT">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="false" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../ressources/icons/x-capture-options@2x.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <ToggleButton fx:id="playCaptureButton" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#handleStartCapture" prefHeight="30.0" prefWidth="30.0" ButtonBar.buttonData="LEFT">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../ressources/icons/x-capture-start@2x.png" />
+                     </image>
+                  </ImageView>
+               </graphic></ToggleButton>
+            <Button fx:id="stopCaptureButton" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#handleStopCapture" prefHeight="30.0" prefWidth="30.0" ButtonBar.buttonData="LEFT">
+               <graphic>
+                  <ImageView disable="true" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../ressources/icons/session_stop.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="resetCaptureButton" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#handleRestartCapture" prefHeight="30.0" prefWidth="30.0" ButtonBar.buttonData="LEFT">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../ressources/icons/x-capture-restart@2x.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <ToggleButton fx:id="playAudioButton" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#handleAudioPlay" prefHeight="30.0" prefWidth="30.0">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../ressources/icons/audio_play.png" />
+                     </image>
+                  </ImageView>
+               </graphic></ToggleButton>
+            <Button fx:id="stopAudioButton" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#handleAudioStop" prefHeight="30.0" prefWidth="30.0">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../ressources/icons/x-capture-stop@2x.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <ComboBox fx:id="audioDirectionComboBox" prefWidth="150.0" />
+        </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>

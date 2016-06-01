@@ -1,0 +1,119 @@
+.button {
+
+    -fx-background-color: derive(#ececec,26.4%);
+
+}
+
+.button:hover {
+    -fx-border-color: #909090;
+    -fx-border-width: 1;
+    -fx-border-radius: 3, 3;
+}
+
+.button:pressed, .button:default:hover:pressed {
+	-fx-border-color: #909090;
+    -fx-border-width: 1;
+    -fx-border-radius: 3, 3;
+    -fx-background-color: #dcdad7;
+    -fx-border-style: solid, segments(1, 1);
+
+}
+
+.button:focused {
+	-fx-border-color: #909090;
+    -fx-border-width: 1;
+    -fx-border-radius: 3, 3;
+    -fx-background-color: #dcdad7;
+    -fx-border-style: solid, segments(1, 1);
+
+}
+
+.button:disabled, .button:default:disabled {
+}
+
+.button:disabled > .image-view  {
+    -fx-opacity: 0.5;
+}
+
+.button:default {
+    -fx-background-color: -fx-focus-color;
+    -fx-text-fill: #ffffff;
+}
+
+.button:default:hover {
+    -fx-background-color: derive(-fx-focus-color,30%);
+}
+
+.toggle-button {
+
+    -fx-background-color: derive(#ececec,26.4%);
+
+}
+
+.toggle-button:hover {
+    -fx-border-color: #909090;
+    -fx-border-width: 1;
+    -fx-border-radius: 3, 3;
+}
+
+.toggle-button:pressed, .toggle-button:default:hover:pressed {
+  -fx-background-color: white;
+  -fx-text-fill: #1d1d1d;
+  	-fx-border-color: #909090;
+    -fx-border-width: 1;
+    -fx-border-radius: 3, 3;
+    -fx-background-color: #dcdad7;
+    -fx-border-style: solid, segments(1, 1);
+  
+}
+
+.toggle-button:focused {
+
+
+}
+
+.toggle-button:disabled, .toggle-button:default:disabled {
+
+}
+
+
+.toggle-button:disabled > .image-view  {
+    -fx-opacity: 0.5;
+}
+
+
+.toggle-button:default {
+    -fx-background-color: -fx-focus-color;
+    -fx-text-fill: #ffffff;
+}
+
+.toggle-button:default:hover {
+    -fx-background-color: derive(-fx-focus-color,30%);
+}
+
+.combo-box-base  
+{
+
+    -fx-background-color: white, white, white, white;
+    -fx-background-radius: 5, 5, 4, 3;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-padding: 0;
+}
+
+.combo-box-base:hover
+{
+    -fx-border-color: #909090;
+    -fx-border-width: 1;
+    -fx-border-radius: 3, 3;
+}
+
+
+.combo-box-base:focused {
+    -fx-background-color: -fx-focus-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+
+     -fx-border-color: #909090;
+}
+
+.combo-box-base:disabled {
+    -fx-opacity: .5;
+}

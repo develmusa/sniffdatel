@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="350.0" minHeight="350.0" prefHeight="350.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.sniffdatel.presentation.controller.InterfaceSelectionController">
+   <children>
+      <TableView fx:id="interfaceTable" layoutY="23.0" prefHeight="257.0" prefWidth="608.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="40.0">
+        <columns>
+            <TableColumn fx:id="numberColumn" prefWidth="36.0" text="Nr" />
+          <TableColumn fx:id="nameColumn" prefWidth="190.0" text="Name" />
+          <TableColumn fx:id="iPColumn" minWidth="0.0" prefWidth="218.0" text="IP " />
+            <TableColumn fx:id="mACColumn" minWidth="0.0" prefWidth="175.0" text="MAC" />
+        </columns>
+      </TableView>
+      <Label layoutX="7.0" layoutY="6.0" text="Select Interface:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <ButtonBar layoutX="440.0" layoutY="323.0" prefHeight="27.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="10.0">
+        <buttons>
+            <Button cancelButton="true" mnemonicParsing="false" onAction="#handleCancel" text="Cancel" />
+          <Button fx:id="startButton" mnemonicParsing="false" onAction="#handleOk" text="Start" />
+        </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html xmlns:vertical-align="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sniffdatel Help</title>
+    <style>
+
+        * {
+            line-height: 1.2;
+            margin: 0;
+        }
+
+        html {
+            color: #888888;
+            display: table;
+            font-family: sans-serif;
+            height: 100%;
+            text-align: center;
+            width: 100%;
+        }
+
+        body {
+            display: table-cell;
+            vertical-align: middle;
+            margin: 2em auto;
+        }
+
+        h1 {
+            color: #555;
+            font-size: 2em;
+            font-weight: 400;
+        }
+
+        h2 {
+            color: #555;
+            font-size: 1.5em;
+            font-weight: 400;
+        }
+
+        h3 {
+            color: #555;
+            font-size: 1.2em;
+            font-weight: 400;
+        }
+
+        p {
+            margin: 0 auto;
+            width: 600px;
+        }
+
+        a {
+            color: #555;
+            margin: 0 auto;
+            width: 600px;
+        }
+
+        p.afterlogo {
+            display: inline;
+        }
+
+        #main {
+            width: 600px;
+            text-align: center;
+            vertical-align: middle;
+            margin: auto;
+        }
+
+        #buttons {
+            width: 240px;
+            text-align: left;
+            vertical-align: middle;
+            margin: auto;
+        }
+        
+        #code {
+            text-align: left;
+            
+        }
+
+    </style>
+</head>
+<body>
+<div id="main">
+    <br>
+    <br>
+    <h1>Sniffdatel Help</h1>
+    <p>Sniffdatel is a realtime VoIp sniffing Tool. It allows to eavesdrop VoIP-Sessions.</p>
+    <br>
+    <h2>Requirements</h2>
+    <br>
+    <p><a href="http://www.oracle.com/technetwork/java/javase/overview/index.html">Java SE 8</a></p>
+    <br>
+    <br>
+    <h2>Installation</h2>
+    <h3>Linux</h3>
+    <p>You only have to extract "sniffdatel_linux.zip"
+    <br>$unzip sniffdatel_linux.zip
+    </p>
+       <br>
+    <h3>Windows</h3>
+    <p>You need <a href="https://www.winpcap.org/install/default.htm">WinPcap</a> installed.   
+    <br>Extract "sniffdatel_windows.zip"
+    </p>
+       <br>
+    <h2>How to use</h2>
+    The following step-by-step instructions describe how to use <b>Sniffdatel</b>.
+    <br>
+    <br>
+    <br>
+    <h3>Start the application:</h3>
+    <p><b>Windows:</b> Just start the "sniffdatel.exe" file.
+    <br><b>Linux:</b> You need root rights to capture network packages. 
+    <br>Switch into the folder "cd sniffdatel/".</p>
+    <br>To start use "sudo ./sniffdatel.sh".</p>
+    <br>
+    <br>
+    <br>
+    <h3>Find VoIP-Sessions:</h3>
+    <p>The first step is to find VoIP-Sessions. Therefore you have to select your network interface on which you want
+        listen for calls.</p>
+    <br>
+    <p><b>1.</b> Click on the "Select network interface" Button. A new Window will open.</p>
+    <br>
+    <img src="images/selectinterfacebutton.png" style="width:650px;">
+    <br>
+    <br>
+    <p><b>2.</b> Select the desired network interface.<b>*</b></p>
+    <p><b>3.</b> Start find VoIP-Sessions with the "Start" Button.</p>
+    <br>
+    <img src="images/interfaceselection.PNG" style="width:650px;">
+    <br>
+    <br>
+    <p><b>Sniffdatel</b> is now listening for new initialized sessions and will add these to the "Session list".</p>
+    <br>
+    <p><b>*</b> Sniffing on wlan devices is only possible if you have a network device with promiscuous mode support.
+    </p>
+    <br>
+    <br>
+    <br>
+    <h3>Start eavesdropping:</h3>
+    <p>After a session is found you have to wait for the state "Active Call..." to start eavesdropping.</p>
+    <br>
+    <p><b>1.</b> Select the desired session in the "Session list".</p>
+    <p><b>2.</b> Choose the "Audio direction" and press "Start Audio".</p>
+    <br>
+    <img src="images/startAudio.png" style="width:650px;">
+    <br>
+    <br>
+    <p>For the moment the only supported codecs are PCMU and PMCA.</p>
+    <br>
+    <br>
+    <br>
+    <h3>Components overview:</h3>
+    <p>The Main view is separated in four parts.</p>
+    <br>
+    <p><b>1.</b> Session finder button bar</p>
+    <p><b>2.</b> Audio button bar</p>
+    <p><b>3.</b> Session list</p>
+    <p><b>4.</b> Session details</p>
+    <img src="images/description.png" style="width:650px;">
+    <br>
+    <br>
+    <h4></h4>
+    <p>Element Descriptions:</p>
+    <br>
+    <div id="buttons">
+        <img style='height: 18px; width: 18px; margin-right: 10px;' align="bottom"
+             src='images/x-capture-options@2x.png'/>
+        <p class='afterlogo'>Select network interface</p>
+        <br>
+        <img style='height: 18px; width: 18px; margin-right: 10px;' align="bottom" src='images/x-capture-start@2x.png'/>
+        <p class='afterlogo'>Start session finder</p>
+        <br>
+        <img style='height: 18px; width: 18px; margin-right: 10px;' align="bottom" src='images/session_stop.png'/>
+        <p class='afterlogo'>Stop session finder</p>
+        <br>
+        <img style='height: 18px; width: 18px; margin-right: 10px;' align="bottom"
+             src='images/x-capture-restart@2x.png'/>
+        <p class='afterlogo'>Restart session finder</p>
+        <br>
+        <img style='height: 18px; width: 18px; margin-right: 10px;' align="bottom" src='images/audio_play.png'/>
+        <p class='afterlogo'>Start audio</p>
+        <br>
+        <img style='height: 18px; width: 18px; margin-right: 10px;' align="bottom" src='images/x-capture-stop@2x.png'/>
+        <p class='afterlogo'>Stop audio</p>
+        <br>
+        <img style='height: 18px; margin-right: 10px;' align="bottom" src='images/audio_direction.PNG'/>
+        <p class='afterlogo'>Audio direction</p>
+        <br>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+</body>
+</html>
